@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>content us</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #42455a;
+            font-family: sans-serif;
+        }
+
+        .Container {
+            background-color: #42455a;
+            margin-left: -40px;
+        }
+
+        .menu ul {
+            display: inline-flex;
+            margin: 50px;
+        }
+
+        .menu ul li {
+            list-style: none;
+            margin: 0 20px;
+            color: #b2b1b1;
+            cursor: pointer;
+        }
+
+        .logo img {
+            width: 30px;
+            margin-top: -7px;
+            margin-right: 48px;
+        }
+
+        .active {
+            color: #19dafa !important;
+        }
+
+        .login-btn {
+            top: 40px;
+            right: 80px;
+            position: absolute;
+            text-decoration: none;
+            color: #fff;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            background-image: linear-gradient(#42455a, #42455a), radial-gradient(circle at top left, #fd00da, #19d7f8);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+        }
+
+        .login-btn span {
+            display: block;
+            padding: 8px 22px;
+        }
+
+        .books-btn span {
+            display: block;
+            color: #b2b1b1;
+        }
+
+        .contactform {
+            width: 85%;
+            max-width: 600px;
+            background: #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 30px 40px;
+            box-sizing: border-box;
+            border-radius: 9px;
+            text-align: center;
+            box-shadow: 0 0 20px #000000b3;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .contactform h1 {
+            margin-top: 0;
+            font-weight: 200;
+        }
+
+        .txtb {
+            border: 1px solid gray;
+            margin: 8px 0;
+            padding: 12px 18px;
+            border-radius: 8px;
+        }
+
+        .txtb label {
+            display: block;
+            text-align: left;
+            color: #333;
+            font-size: 14 px;
+        }
+
+        .txtb input,
+        txtb textarea {
+            width: 100%;
+            border: none;
+            background: none;
+            outline: none;
+
+            font-size: 14px;
+            margin-top: 6px;
+        }
+
+        .btn {
+            display: block;
+            background: #3498db;
+            padding: 14 px 0;
+            color: white;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 8 px;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- js -->
+
+
+    <script>
+        function validate() {
+            var fullNameField = document.getElementById('full_name')
+            var emailField = document.getElementById('email')
+            var messageField = document.getElementById('message')
+
+            if (fullNameField.value == "") {
+                alert("Please provide your full name!");
+                fullNameField.focus();
+                return false;
+            }
+
+            if (emailField.value == "") {
+                alert("Please provide your email address!");
+                emailField.focus();
+                return false;
+            }
+
+            if (messageField.value == "") {
+                alert("Please provide a message!");
+                messageField.focus();
+                return false;
+            }
+
+            return true;
+        }
+
+
+    </script>
+
+    <div class="Container">
+        <div class="menu">
+            <ul>
+                <li class="logo"><img src="assests/imgs/book.png"></li>
+                <li><a href="project.html" class="books-btn"><span>Home</span></a></li>
+                <li><a href="books.html" class="books-btn"><span>Books</span></a></li>
+                <li><a href="services.html" class="books-btn"><span>Services</span></a></li>
+                <li><a href="about us.html" class="books-btn"><span>About us</span></a></li>
+                <li class="active">Contact</li>
+                <li><a href="login.html" class="login-btn"><span>login</span></a></li>
+            </ul>
+        </div>
+        <form id="contactform" class="contactform" onsubmit="return(validate());">
+            <h1>contact us</h1>
+            <div class="txtb">
+                <label>Full name:</label>
+                <input type="text" id="full_name" value="" placeholder="enter your name">
+            </div>
+            <div class="txtb">
+                <label>Email:</label>
+                <input type="email" id="email" value="" placeholder="enter your email">
+            </div>
+            <div class="txtb">
+                <label>Message:</label>
+                <textarea id="message"></textarea>
+            </div>
+            <button type="submit" class="btn">Send</button>
+        </form>
+    </div>
+</body>
+
+
+</html>

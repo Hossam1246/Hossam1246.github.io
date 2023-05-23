@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<HTMl>
+    <HEAD>
+        <title>Books</title>
+ 
+
+         <style type="text/css">
+           
+            html,body{
+               height: 100%;
+            }
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+            }
+            .Container{
+               
+                background-color: #42455a;
+            }
+
+            .menu ul{
+                display: inline-flex;
+                margin: 50px;
+            }
+            .menu ul li{
+                list-style: none;
+                margin: 0 20px;
+                color: #b2b1b1;
+                cursor: pointer;
+            }
+            .logo img{
+                width: 30px;
+                margin-top: -7px;
+                margin-right: 48px;
+            }
+            .active{
+                color: #19dafa !important;
+            }
+            .login-btn{
+                top: 40px;
+                right: 80px;
+                position: absolute;
+                text-decoration: none;
+                color: #fff;
+                border: 2px solid transparent;
+                border-radius: 20px;
+                background-image: linear-gradient(#42455a,#42455a),radial-gradient(circle at top left,#fd00da,#19d7f8);
+                background-origin: border-box;
+                background-clip: content-box,border-box;
+            }
+            .login-btn span{
+                display: block;
+                padding: 8px 22px;
+            }
+            .books-btn span{
+                display: block;
+                color: #b2b1b1;
+            }
+
+
+
+            .gallery{
+                
+                 
+                 padding: 2em; 
+                 min-height: 120vh; 
+                background-color: #42455a;
+
+         
+            } 
+
+
+
+            .Container2{
+                margin-right: 5px;
+               
+                 display: flex;
+                flex-wrap: wrap;
+               margin-left: 180px; 
+                background-color: #42455a;
+
+                align-items: flex-start;
+                justify-content: start;  
+                
+                
+
+
+            }
+            .Container2 img{
+                padding: 20px;
+                cursor: pointer;
+            }
+            a {
+                text-decoration: none;
+            }
+             body{
+                margin: 0;
+            } 
+            
+           
+
+
+             .buttons{
+                padding: 2em 0 6em 0;
+                 display: flex; 
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            } 
+            .buttons button{
+                margin: 1em;
+                padding: 0.7em 1.5em;
+                font-size: 1.1em;
+                border: none;
+                background: #202446;
+                color: #b2b1b1;
+                border: 2px solid #7165a8;
+                border-radius: 0.2em;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            .buttons button:hover,.buttons .btn-clicked{
+                background: #7165a8;
+                color: #19d7f8;
+                border: 2px solid #202446;
+            }
+             .images{
+                max-width: 1360px;
+                margin: 0 auto;
+               
+            } 
+            .images img{
+                width: 25em;
+                margin: 1em;
+                border-radius: 0.2em;
+                transition: 0.6s;
+
+            }
+
+
+
+            .zoom {
+                    
+                    
+                    transition: transform .4s; /* Animation */
+                    
+                    }
+
+            .zoom:hover {
+                    transform: scale(1.1); 
+                    }
+
+
+
+
+
+            /*classes for javascript*/
+
+
+            .images .img-expand{
+                width: 25em;
+                margin: 1em;
+            }
+            
+            .images .img-shrink{
+                width: 0em;
+                margin: -1em;
+            } 
+              @media screen and (max-width:1439px) {
+                .images {
+                    max-width: 896px;
+                }
+             }
+             @media screen and (max-width:986px) {
+                .images {
+                    align-items: center;
+                    flex-direction: column;
+                }
+                .images img{
+                    margin-right: 0 !important;
+                    margin-left: 0 !important;
+                }
+             }
+             @media screen and (max-width:600px) {
+                .buttons button{
+                    width: 100%;
+                    display: block;
+                }
+                .images .img-expand,.images img {
+                    width: 100%;
+                } 
+            }
+
+            
+            
+       
+            
+        </style> 
+    </HEAD>
+    <body>
+    
+    <div class="Container">
+        <div class="menu">
+            <ul>
+                <li class="logo"><img src="./assests/imgs/book.png"></li>
+                <li><a href="project.html"  class="books-btn"><span>Home</span></a></li>
+                <li class="active">Books</li>
+                <li><a href="services.html"  class="books-btn"><span>Services</span></a></li>
+                <li><a href="about us.html"  class="books-btn"><span>About us</span></a></li>
+                <li><a href="contact us.html"  class="books-btn"><span>Contact</span></a></li>
+                <li><a href="login.html" class="login-btn"><span>login</span></a></li>
+            </ul>
+        </div>
+    
+        <section class="gallery">
+            <div class="buttons">
+                <button type="button">
+                    All
+                </button>
+                <button type="button" data-btn="1">
+                    Crime
+                </button>
+                <button type="button" data-btn="2">
+                    Science Fiction
+                </button>
+                <button type="button" data-btn="3">
+                    Adventure
+                </button>
+                <button type="button" data-btn="4">
+                    Poetry
+                </button>
+                <button type="button">
+                
+                    <a href="quotes.html"><span>Quotes</span></a>
+                </button>
+            </div>
+
+    <div class="images Container2">
+        <img src="./assests/imgs/covers/c2.jpg" width="280" height="410" alt="img" data-img="1" class="zoom"/>
+        <img src="./assests/imgs/covers/c6.jpg" width="280" height="410" alt="img" data-img="1" class="zoom"/>
+        <img src="./assests/imgs/covers/c9.jpg" width="280" height="410" alt="img" data-img="1" class="zoom"/>
+        <img src="./assests/imgs/covers/c10.jpg" width="280" height="410" alt="img" data-img="1" class="zoom"/>
+        <img src="./assests/imgs/covers/c16.jpg" width="280" height="410" alt="img" data-img="1" class="zoom"/>
+        <img src="./assests/imgs/covers/c24.jpg" width="280" height="410" alt="img" data-img="1" class="zoom"/>
+        <img src="./assests/imgs/covers/c26.jpg" width="280" height="410" alt="img" data-img="1" class="zoom"/>
+        <img src="./assests/imgs/covers/c27.jpg" width="280" height="410" alt="img" data-img="1" class="zoom"/>
+        <img src="./assests/imgs/covers/c31.jpg" width="280" height="410" alt="img" data-img="1" class="zoom"/>
+        <img src="./assests/imgs/covers/c33.jpg" width="280" height="410" alt="img" data-img="1" class="zoom"/>
+        <img src="./assests/imgs/covers/c14.jpg" width="280" height="410" alt="img" data-img="2" class="zoom"/>
+        <img src="./assests/imgs/covers/c25.jpg" width="280" height="410" alt="img" data-img="2" class="zoom"/>
+        <img src="./assests/imgs/covers/c30.jpg" width="280" height="410" alt="img" data-img="2" class="zoom"/>
+        <img src="./assests/imgs/covers/c32.jpg" width="280" height="410" alt="img" data-img="2" class="zoom"/>
+        <img src="./assests/imgs/covers/c40.jpg" width="280" height="410" alt="img" data-img="2" class="zoom"/>
+        <img src="./assests/imgs/covers/c3.jpg" width="280" height="410" alt="img" data-img="2" class="zoom"/>
+        <img src="./assests/imgs/covers/c7.jpg" width="280" height="410" alt="img" data-img="2" class="zoom"/>
+        <img src="./assests/imgs/covers/c35.jpg" width="280" height="410" alt="img" data-img="2" class="zoom"/>
+        <img src="./assests/imgs/covers/c5.jpg" width="280" height="410" alt="img" data-img="2" class="zoom"/>
+        <img src="./assests/imgs/covers/c1.jpg" width="280" height="410" alt="img" data-img="3" class="zoom"/>
+        <img src="./assests/imgs/covers/c5.jpg" width="280" height="410" alt="img" data-img="3" class="zoom"/>
+        <img src="./assests/imgs/covers/c6.jpg" width="280" height="410" alt="img" data-img="3" class="zoom"/>
+        <img src="./assests/imgs/covers/c7.jpg" width="280" height="410" alt="img" data-img="3" class="zoom"/>
+        <img src="./assests/imgs/covers/c12.jpg" width="280" height="410" alt="img" data-img="3" class="zoom"/>
+        <img src="./assests/imgs/covers/c13.jpg" width="280" height="410" alt="img" data-img="3" class="zoom"/>
+        <img src="./assests/imgs/covers/c14.jpg" width="280" height="410" alt="img" data-img="3" class="zoom"/>
+        <img src="./assests/imgs/covers/c17.jpg" width="280" height="410" alt="img" data-img="3" class="zoom"/>
+        <img src="./assests/imgs/covers/c39.jpg" width="280" height="410" alt="img" data-img="3" class="zoom"/>
+        <img src="./assests/imgs/covers/c11.jpg" width="280" height="410" alt="img" data-img="4" class="zoom"/>
+        <img src="./assests/imgs/covers/c4.jpg" width="280" height="410" alt="img" data-img="4" class="zoom"/>
+        <img src="./assests/imgs/covers/c28.jpg" width="280" height="410" alt="img" data-img="4" class="zoom"/>
+        <img src="./assests/imgs/covers/c15.jpg" width="280" height="410" alt="img" data-img="4" class="zoom"/>
+        <img src="./assests/imgs/covers/c22.jpg" width="280" height="410" alt="img" data-img="4" class="zoom"/>
+        <img src="./assests/imgs/covers/c38.jpg" width="280" height="410" alt="img" data-img="4" class="zoom"/>
+        <img src="./assests/imgs/covers/c36.jpg" width="280" height="410" alt="img" data-img="4" class="zoom"/>
+        <img src="./assests/imgs/covers/c19.jpg" width="280" height="410" alt="img" data-img="4" class="zoom"/>
+        <img src="./assests/imgs/covers/c20.jpg" width="280" height="410" alt="img" data-img="4" class="zoom"/>
+        <img src="./assests/imgs/covers/c18.jpg" width="280" height="410" alt="img" data-img="4" class="zoom"/>
+        <img src="./assests/imgs/covers/c21.jpg" width="280" height="410" alt="img" data-img="4" class="zoom"/>
+        <img src="./assests/imgs/covers/c8.jpg" width="280" height="410" alt="img" data-img="4" class="zoom"/>
+        <img src="./assests/imgs/covers/c23.jpg" width="280" height="410" alt="img" data-img="4" class="zoom"/>
+
+    </div>
+
+</section>
+</div>
+  
+
+<script>
+    //get elements from DOM
+    const btns =document.querySelectorAll('.buttons button');
+    const imgs =document.querySelectorAll('.images img');
+
+    //Add a click event to all buttons
+    for(let i=1;i<btns.length;i++){
+        btns[i].addEventListener('click',filterImg);
+    }
+
+    //set active button on click
+    function setActiveBtn(e){
+        //remove active class from all buttons
+        btns.forEach(btn => {
+            btn.classList.remove('btn-clicked');
+        });
+
+        //Add active class to clicked button
+        e.target.classList.add('btn-clicked');
+    }
+
+    //filter images
+    function filterImg(e){
+        //run the active button function
+        setActiveBtn(e);
+
+        //loop through all images
+        imgs.forEach(img => {
+            //expand all images
+            img.classList.remove('img-shrink');
+            img.classList.add('img-expand');
+
+            //get data from data attributes
+            //get image type data
+            const imgType = parseInt(img.dataset.img);
+
+            //get button type data
+            const btnType =parseInt(e.target.dataset.btn);
+
+            /*
+                if the image type and the type of the
+                clicked button are not the same
+            */
+           if(imgType !== btnType) {
+            //hide the image
+            img.classList.remove('img-expand');
+            img.classList.add('img-shrink');
+           }
+        });
+    }
+
+    //set click event for the 'All' button 
+    btns[0].addEventListener('click',(e) => {
+        //run the action button function 
+        setActiveBtn(e);
+
+        //loop through all images
+        imgs.forEach(img => {
+            //expand all images
+            img.classList.remove('img-shrink');
+            img.classList.add('img-expanded');
+        });
+    });
+
+
+
+
+
+</script>
+
+
+
+</body>
+</HTMl>
+
+
+
+
+
+
+
+
+
+
